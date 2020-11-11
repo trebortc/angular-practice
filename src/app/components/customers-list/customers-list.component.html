@@ -1,0 +1,16 @@
+<div *ngFor="let item of itemsAll | slice: start : end">
+  <label>
+    <input
+      type="checkbox"
+      [checked]="isItemSelected(item)"
+      (change)="$event.target.checked ? select(item) : unselect(item)"
+    />
+    {{ item.label }}
+  </label>
+</div>
+
+<div class='pages'>
+  <div *ngFor="let p of pages; let i = index;" class='page' [class.selected]="i === page" (click)="changePage(i)">
+    {{ i }}
+  </div>
+</div>

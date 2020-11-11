@@ -1,0 +1,14 @@
+.pages {
+  display: flex;
+  margin: 10px 0;
+}
+
+.page {
+  margin: 0 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.page.selected {
+  color: red;
+}

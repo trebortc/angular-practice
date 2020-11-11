@@ -1,0 +1,8 @@
+<label>
+  <input
+    type="checkbox"
+    [checked]="isSelected"
+    (change)="$event.target.checked ? selected.emit(item) : unselected.emit(item)"
+  />
+  {{ item.label }}
+</label>
